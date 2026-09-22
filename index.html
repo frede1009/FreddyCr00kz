@@ -1,13 +1,78 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    Home page
+    Landing screen with premium hero section, intro copy, and quick links.
+  -->
   <head>
     <meta charset="UTF-8" />
-    <meta http-equiv="refresh" content="0; url=HTML/home.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>FreddyCr00kz</title>
+    <title>Home</title>
     <link rel="stylesheet" href="stylesheet.css" />
   </head>
   <body>
-    <p>Redirecting to homepage...</p>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">FreddyCr00kz</div>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="./">Home</a></li>
+          <li><a href="HTML/agent.html">Simple Agent</a></li>
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="findings-menu">
+              Findings
+            </button>
+            <ul class="nav-submenu" id="findings-menu">
+              <li><a href="HTML/services.html#core-findings">Core references</a></li>
+              <li><a href="HTML/services.html#quick-wins">Helpful scripts</a></li>
+            </ul>
+          </li>
+          <li><a href="HTML/contact.html">About</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-top-bar">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="./">Home</a>
+      </nav>
+    </div>
+
+    <main class="page-shell">
+      <section class="hero section">
+        <div class="hero-content">
+          <p class="eyebrow">Welcome</p>
+          <h1>Learning by building.</h1>
+          <p>I’m a beginner web developer testing ideas, practicing front-end skills, and turning experiments into working UI concepts.</p>
+          <div class="hero-actions">
+            <a class="primary-button" href="HTML/agent.html">Open Simple Agent</a>
+            <a class="secondary-button" href="HTML/services.html">Explore Findings</a>
+          </div>
+        </div>
+
+        <div class="feature-grid">
+          <article class="feature-card">
+            <h3>CSS experiments</h3>
+            <p>Testing layouts, colors, spacing, and visual styling to improve my front-end instincts.</p>
+          </article>
+          <article class="feature-card">
+            <h3>JavaScript practice</h3>
+            <p>Trying out logic, interactions, and scripting patterns to understand how modern websites behave.</p>
+          </article>
+          <article class="feature-card">
+            <h3>Frontend growth</h3>
+            <p>Using this site as a creative playground to learn, build, and refine my coding skills.</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <script src="JS/burger.js"></script>
   </body>
 </html>
