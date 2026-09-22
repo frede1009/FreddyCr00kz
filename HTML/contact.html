@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    About page
+    Personal profile section with learning focus, skill tags, and profile details.
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Kontakt</title>
+    <title>About</title>
     <link rel="stylesheet" href="../stylesheet.css" />
   </head>
   <body>
+    <!-- Navigation + burger menu -->
     <nav class="navbar">
       <div class="navbar-container">
         <div class="logo">FreddyCr00kz</div>
@@ -20,9 +25,16 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="home.html">Home</a></li>
           <li><a href="agent.html">Simple Agent</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Tutorials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="findings-menu">
+              Findings
+            </button>
+            <ul class="nav-submenu" id="findings-menu">
+              <li><a href="services.html#core-findings">Core references</a></li>
+              <li><a href="services.html#quick-wins">Helpful scripts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">About</a></li>
         </ul>
       </div>
     </nav>
@@ -31,14 +43,43 @@
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="home.html">Home</a>
         <span class="separator">/</span>
-        <span class="current">Contact</span>
+        <span class="current">About</span>
       </nav>
     </div>
 
-    <main class="page-shell">
-      <section class="section">
-        <h2>Kontakt</h2>
-        <p>Tilføj telefonnummer, e-mail, adresse eller en kontaktformular her.</p>
+    <!-- About content -->
+    <main class="page-shell about-page">
+      <section class="section about-layout">
+        <div class="about-card profile-panel">
+          <p class="eyebrow">Learning profile</p>
+          <h2>About</h2>
+          <div class="profile-badge">Beginner Front-End Developer</div>
+          <p>I’m a beginner in website development and coding in general, and I’m still learning every day.</p>
+          <p>This is my testing site where I experiment with everything from simple CSS styling to more advanced scripting, layout ideas, and front-end concepts.</p>
+
+          <div class="skill-list" aria-label="Skills and topics">
+            <span class="skill-pill">HTML</span>
+            <span class="skill-pill">CSS</span>
+            <span class="skill-pill">JavaScript</span>
+            <span class="skill-pill">Responsive Design</span>
+            <span class="skill-pill">UI Experiments</span>
+            <span class="skill-pill">Frontend Learning</span>
+          </div>
+        </div>
+
+        <div class="about-card details-panel">
+          <h3>Currently exploring</h3>
+          <ul class="about-list">
+            <li>Modern layout patterns</li>
+            <li>Clean visual design systems</li>
+            <li>JavaScript interactivity</li>
+            <li>Responsive and mobile-first thinking</li>
+            <li>Small projects that teach real skills</li>
+          </ul>
+
+          <h3>What this site is for</h3>
+          <p>This project is my playground for testing ideas, trying new code, and improving my understanding of how websites work from the inside out.</p>
+        </div>
       </section>
     </main>
 

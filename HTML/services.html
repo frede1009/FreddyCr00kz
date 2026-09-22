@@ -1,12 +1,17 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    Findings page
+    Resource library page for references, tutorials, scripts, and inspiration links.
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tutorials</title>
+    <title>Findings</title>
     <link rel="stylesheet" href="../stylesheet.css" />
   </head>
   <body>
+    <!-- Navigation + burger menu -->
     <nav class="navbar">
       <div class="navbar-container">
         <div class="logo">FreddyCr00kz</div>
@@ -20,9 +25,16 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="home.html">Home</a></li>
           <li><a href="agent.html">Simple Agent</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Tutorials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-dropdown open">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="true" aria-controls="findings-menu">
+              Findings
+            </button>
+            <ul class="nav-submenu" id="findings-menu">
+              <li><a href="#core-findings">Core references</a></li>
+              <li><a href="#quick-wins">Helpful scripts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">About</a></li>
         </ul>
       </div>
     </nav>
@@ -31,43 +43,79 @@
       <nav class="breadcrumb" aria-label="Breadcrumb">
         <a href="home.html">Home</a>
         <span class="separator">/</span>
-        <span class="current">Tutorials</span>
+        <span class="current">Findings</span>
       </nav>
     </div>
 
+    <!-- Findings cards -->
     <main class="page-shell">
-      <section class="section tutorial-section">
+      <section id="core-findings" class="section tutorial-section">
         <div class="section-heading-row">
           <div>
-            <p class="eyebrow">Learning path</p>
-            <h2>Tutorials</h2>
+            <p class="eyebrow">Saved resources</p>
+            <h2>Findings</h2>
           </div>
-          <span class="tutorial-pill">Coming soon</span>
+          <span class="tutorial-pill">Great finds</span>
         </div>
 
         <div class="tutorial-grid">
-          <a class="tutorial-card empty" href="home.html">
+          <a class="tutorial-card" href="https://www.w3schools.com/html/default.asp" target="_blank" rel="noreferrer">
             <span class="tutorial-number">01</span>
-            <h3>HTML Foundations</h3>
-            <p>Upcoming tutorial</p>
+            <h3>W3Schools HTML</h3>
+            <p>Great beginner-friendly HTML tutorials for structure, forms, semantic tags, and page basics.</p>
           </a>
 
-          <a class="tutorial-card empty" href="agent.html">
+          <a class="tutorial-card" href="https://www.w3schools.com/css/default.asp" target="_blank" rel="noreferrer">
             <span class="tutorial-number">02</span>
-            <h3>CSS Layouts</h3>
-            <p>Upcoming tutorial</p>
+            <h3>W3Schools CSS</h3>
+            <p>Clear explanations for selectors, layout, colors, sizing, and responsive styling.</p>
           </a>
 
-          <a class="tutorial-card empty" href="about.html">
+          <a class="tutorial-card" href="https://www.w3schools.com/js/default.asp" target="_blank" rel="noreferrer">
             <span class="tutorial-number">03</span>
-            <h3>JavaScript Basics</h3>
-            <p>Upcoming tutorial</p>
+            <h3>W3Schools JavaScript</h3>
+            <p>Practical intro lessons for variables, loops, functions, DOM manipulation, and events.</p>
           </a>
 
-          <a class="tutorial-card empty" href="contact.html">
+          <a class="tutorial-card" href="https://css-tricks.com/" target="_blank" rel="noreferrer">
             <span class="tutorial-number">04</span>
-            <h3>Responsive Design</h3>
-            <p>Upcoming tutorial</p>
+            <h3>CSS-Tricks</h3>
+            <p>Excellent for layout inspiration, polished styling patterns, and practical UI techniques.</p>
+          </a>
+        </div>
+      </section>
+
+      <section id="quick-wins" class="section tutorial-section resource-section">
+        <div class="section-heading-row small-gap">
+          <div>
+            <p class="eyebrow">Quick wins</p>
+            <h3>Helpful scripts & inspiration</h3>
+          </div>
+        </div>
+
+        <div class="tutorial-grid">
+          <a class="tutorial-card" href="https://www.w3schools.com/howto/default.asp" target="_blank" rel="noreferrer">
+            <span class="tutorial-number">A</span>
+            <h3>W3Schools HowTo</h3>
+            <p>Useful copy-paste examples for menus, forms, layouts, and small UI patterns.</p>
+          </a>
+
+          <a class="tutorial-card" href="https://css-tricks.com/snippets/" target="_blank" rel="noreferrer">
+            <span class="tutorial-number">B</span>
+            <h3>CSS-Tricks Snippets</h3>
+            <p>A strong place for practical CSS snippets and common front-end solutions.</p>
+          </a>
+
+          <a class="tutorial-card" href="https://cssgradient.io/" target="_blank" rel="noreferrer">
+            <span class="tutorial-number">C</span>
+            <h3>CSS Gradients</h3>
+            <p>Perfect for generating premium-looking backgrounds and modern UI effects.</p>
+          </a>
+
+          <a class="tutorial-card" href="https://www.youtube.com/results?search_query=javascript+for+beginners" target="_blank" rel="noreferrer">
+            <span class="tutorial-number">D</span>
+            <h3>JS Beginner Videos</h3>
+            <p>Useful if I want quick visual explanations for core JavaScript concepts.</p>
           </a>
         </div>
       </section>

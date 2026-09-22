@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    Home page
+    Landing screen with premium hero section, intro copy, and quick links.
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +11,7 @@
     <link rel="stylesheet" href="../stylesheet.css" />
   </head>
   <body>
+    <!-- Navigation + burger menu -->
     <nav class="navbar">
       <div class="navbar-container">
         <div class="logo">FreddyCr00kz</div>
@@ -20,9 +25,16 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="home.html">Home</a></li>
           <li><a href="agent.html">Simple Agent</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Services</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="findings-menu">
+              Findings
+            </button>
+            <ul class="nav-submenu" id="findings-menu">
+              <li><a href="services.html#core-findings">Core references</a></li>
+              <li><a href="services.html#quick-wins">Helpful scripts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">About</a></li>
         </ul>
       </div>
     </nav>
@@ -33,30 +45,31 @@
       </nav>
     </div>
 
+    <!-- Main landing section -->
     <main class="page-shell">
       <section class="hero section">
         <div class="hero-content">
           <p class="eyebrow">Welcome</p>
-          <h1>Build something bold.</h1>
-          <p>Modern frontend experiments, clean interfaces, and a polished browser-side assistant that helps you prototype ideas faster.</p>
+          <h1>Learning by building.</h1>
+          <p>I’m a beginner web developer testing ideas, practicing front-end skills, and turning experiments into working UI concepts.</p>
           <div class="hero-actions">
             <a class="primary-button" href="agent.html">Open Simple Agent</a>
-            <a class="secondary-button" href="services.html">Explore Tutorials</a>
+            <a class="secondary-button" href="services.html">Explore Findings</a>
           </div>
         </div>
 
         <div class="feature-grid">
           <article class="feature-card">
-            <h3>Clean UI</h3>
-            <p>Modern polished layout with spacious cards, clarity, and premium dark styling.</p>
+            <h3>CSS experiments</h3>
+            <p>Testing layouts, colors, spacing, and visual styling to improve my front-end instincts.</p>
           </article>
           <article class="feature-card">
-            <h3>Swift ideas</h3>
-            <p>Prototype visuals and interactions quickly with a lightweight front-end stack.</p>
+            <h3>JavaScript practice</h3>
+            <p>Trying out logic, interactions, and scripting patterns to understand how modern websites behave.</p>
           </article>
           <article class="feature-card">
-            <h3>Frontend help</h3>
-            <p>Ask the built-in agent for practical tips on HTML, CSS, JS, and layouts.</p>
+            <h3>Frontend growth</h3>
+            <p>Using this site as a creative playground to learn, build, and refine my coding skills.</p>
           </article>
         </div>
       </section>

@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+  <!--
+    Simple Agent page
+    Local chatbot interface with prompt chips, dropdown prompt library, and message board.
+  -->
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -7,6 +11,7 @@
     <link rel="stylesheet" href="../stylesheet.css" />
   </head>
   <body>
+    <!-- Navigation + burger menu -->
     <nav class="navbar">
       <div class="navbar-container">
         <div class="logo">FreddyCr00kz</div>
@@ -20,9 +25,16 @@
         <ul class="nav-menu" id="navMenu">
           <li><a href="home.html">Home</a></li>
           <li><a href="agent.html">Simple Agent</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="services.html">Tutorials</a></li>
-          <li><a href="contact.html">Contact</a></li>
+          <li class="nav-item nav-dropdown">
+            <button type="button" class="nav-dropdown-toggle" aria-expanded="false" aria-controls="findings-menu">
+              Findings
+            </button>
+            <ul class="nav-submenu" id="findings-menu">
+              <li><a href="services.html#core-findings">Core references</a></li>
+              <li><a href="services.html#quick-wins">Helpful scripts</a></li>
+            </ul>
+          </li>
+          <li><a href="contact.html">About</a></li>
         </ul>
       </div>
     </nav>
@@ -35,11 +47,18 @@
       </nav>
     </div>
 
+    <!-- Agent chat app -->
     <main class="page-shell">
       <div class="app agent-card">
         <div class="agent-header">
-          <p class="eyebrow eyebrow-light">AI assistant</p>
-          <h1>Simple Agent</h1>
+          <div class="agent-header-row">
+            <div>
+              <p class="eyebrow eyebrow-light">AI assistant</p>
+              <h1>Simple Agent</h1>
+            </div>
+            <button type="button" class="ghost-button" id="clear-chat">Clear chat</button>
+          </div>
+          <div class="status-pill"><span class="status-dot"></span>Online & ready</div>
         </div>
         <section id="chat-output" class="chat" aria-live="polite"></section>
 
@@ -47,23 +66,9 @@
           <button type="button" class="prompt-chip" data-prompt="Give me a simple navbar example">Navbar example</button>
           <button type="button" class="prompt-chip" data-prompt="How do I build a card component in CSS?">Card CSS</button>
           <button type="button" class="prompt-chip" data-prompt="How do I make a responsive layout?">Responsive layout</button>
-        </div>
-
-        <div class="prompt-picker-wrap">
-          <label class="prompt-label" for="prompt-select">Prompt library</label>
-          <select id="prompt-select" class="prompt-select" aria-label="Available prompts">
-            <option value="">Choose a prompt...</option>
-            <option value="Give me a simple navbar example">Give me a simple navbar example</option>
-            <option value="How do I build a card component in CSS?">How do I build a card component in CSS?</option>
-            <option value="How do I make a responsive layout?">How do I make a responsive layout?</option>
-            <option value="How do I center a div in CSS?">How do I center a div in CSS?</option>
-            <option value="How do I add a click event in JavaScript?">How do I add a click event in JavaScript?</option>
-            <option value="How do I debug a broken JavaScript script?">How do I debug a broken JavaScript script?</option>
-            <option value="How do I create a form in HTML?">How do I create a form in HTML?</option>
-            <option value="What are good HTML semantics?">What are good HTML semantics?</option>
-            <option value="How do I do dark mode in CSS?">How do I do dark mode in CSS?</option>
-            <option value="What can you do?">What can you do?</option>
-          </select>
+          <button type="button" class="prompt-chip" data-prompt="What are good accessibility practices in HTML?">A11y basics</button>
+          <button type="button" class="prompt-chip" data-prompt="How can I improve my frontend workflow?">Workflow tips</button>
+          <button type="button" class="prompt-chip" data-prompt="How do I debug a broken JavaScript script?">Debugging</button>
         </div>
 
         <div class="composer">
