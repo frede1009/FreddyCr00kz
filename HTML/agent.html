@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Simple Agent</title>
+    <link rel="stylesheet" href="../stylesheet.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="navbar-container">
+        <div class="logo">FreddyCr00kz</div>
+
+        <button class="burger" id="burgerBtn" aria-label="Open menu" aria-expanded="false">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a href="home.html">Home</a></li>
+          <li><a href="agent.html">Simple Agent</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="services.html">Tutorials</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <div class="page-top-bar">
+      <nav class="breadcrumb" aria-label="Breadcrumb">
+        <a href="home.html">Home</a>
+        <span class="separator">/</span>
+        <span class="current">Simple Agent</span>
+      </nav>
+    </div>
+
+    <main class="page-shell">
+      <div class="app agent-card">
+        <div class="agent-header">
+          <p class="eyebrow eyebrow-light">AI assistant</p>
+          <h1>Simple Agent</h1>
+        </div>
+        <section id="chat-output" class="chat" aria-live="polite"></section>
+
+        <div class="prompt-row" aria-label="Suggested prompts">
+          <button type="button" class="prompt-chip" data-prompt="Give me a simple navbar example">Navbar example</button>
+          <button type="button" class="prompt-chip" data-prompt="How do I build a card component in CSS?">Card CSS</button>
+          <button type="button" class="prompt-chip" data-prompt="How do I make a responsive layout?">Responsive layout</button>
+        </div>
+
+        <div class="prompt-picker-wrap">
+          <label class="prompt-label" for="prompt-select">Prompt library</label>
+          <select id="prompt-select" class="prompt-select" aria-label="Available prompts">
+            <option value="">Choose a prompt...</option>
+            <option value="Give me a simple navbar example">Give me a simple navbar example</option>
+            <option value="How do I build a card component in CSS?">How do I build a card component in CSS?</option>
+            <option value="How do I make a responsive layout?">How do I make a responsive layout?</option>
+            <option value="How do I center a div in CSS?">How do I center a div in CSS?</option>
+            <option value="How do I add a click event in JavaScript?">How do I add a click event in JavaScript?</option>
+            <option value="How do I debug a broken JavaScript script?">How do I debug a broken JavaScript script?</option>
+            <option value="How do I create a form in HTML?">How do I create a form in HTML?</option>
+            <option value="What are good HTML semantics?">What are good HTML semantics?</option>
+            <option value="How do I do dark mode in CSS?">How do I do dark mode in CSS?</option>
+            <option value="What can you do?">What can you do?</option>
+          </select>
+        </div>
+
+        <div class="composer">
+          <input id="user-input" type="text" placeholder="Type a message..." aria-label="Message" />
+          <button id="send-button" type="button">Send</button>
+        </div>
+      </div>
+    </main>
+
+    <script src="../JS/burger.js"></script>
+    <script src="../JS/agent.js"></script>
+  </body>
+</html>
